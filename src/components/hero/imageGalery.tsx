@@ -24,9 +24,7 @@ function ReactImageGalery() {
     return (
         <>
             <Swiper
-                style={{
-                    color: '#fff',
-                }}
+                
                 spaceBetween={30}
                 effect={'fade'}
                 navigation={true}
