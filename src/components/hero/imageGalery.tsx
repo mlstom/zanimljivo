@@ -39,8 +39,8 @@ function ReactImageGalery() {
                 modules={[EffectFade, Navigation, Pagination, Autoplay]}
                 className="mySwiper"
             >
-                {proizvodi.map((product, ind) => <SwiperSlide className='relative z-20'>
-                    <div className='absolute z-50 top-[40%] left-0 px-2 min-w-[400px] '>
+                {proizvodi.map((product, ind) => <SwiperSlide className='relative z-20' key={ind}>
+                    <div className='absolute z-50 top-[40%] left-0 md:left-10 px-2 min-w-[400px] max-w-[500px] '>
                         <div className="mx-auto max-w-3xl text-center">
                             <h1 className="bg-gradient-to-r from-[#C1E1E3] via-[#A4D4AB] to-[#0D525A] bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
                                 {product.naslov}
@@ -66,7 +66,7 @@ function ReactImageGalery() {
                             </div>
                         </div>
                     </div>
-                    <img key={ind} src={product.image} className='object-cover h-[700px] brightness-50  '  width='1500px'  />
+                    <img key={ind} src={product.image} className='object-cover h-[700px] brightness-50  '  width='1500px' height={700}  />
 
                 </SwiperSlide>)}
 
